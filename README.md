@@ -1,16 +1,16 @@
 # my-first-repo
 
 
-I added this sentence using the Githhub online interface to edit the file. 
+## Usage
 
-# My First Repo!
+Play a game of rock, paper, scissors:
 
-This is the README.md file. It uses the markdown language.
+```sh
+# only works if this file does NOT import from other local py files:
+python app/rps.py
+```
 
-Here is a list:
+# if this file imports from other local py files:
+python -m app.rps
+```
 
-  + Item 1
-  + Item 2
-  + Item 3
-
-For more information about Markdown syntax, see the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
