@@ -1,17 +1,7 @@
 # this is my rock paper scissors game
 
-print("Welcome to my game")
-
-player_choice = input("Please select an option ('rock', 'paper', 'scissors'): ")
-
-print("USER CHOSE:", player_choice)
-
 import random
-
 VALID_OPTIONS = ("rock", "paper", "scissors")
-
-computer_choice = random.choice(VALID_OPTIONS)
-print("COMPUTER CHOSE:", computer_choice)
 
 def determine_winner(u, c):
     if u == c:
@@ -25,12 +15,28 @@ def determine_winner(u, c):
     elif u == "scissors" and c == "paper":
         result = "USER WINS"
     elif u == "paper" and c == "rock":
+        # result = "COMP WINS" #oops that was a bug 
         result = "USER WINS"
     elif u == "paper" and c == "scissors":
         result = "COMP WINS"
     return result
 
-result_message = determine_winner(player_choice, computer_choice)
+#ONLY RUN THE CODE INDENTED INSIDE IF WE ARE RUNNING
+# THIS SCRIPT FROM THE COMMAND LINE, BUT NOT IF WE ARE IMPORTING
 
-print(result_message)
+if __name__ == "__main__":
+
+    print("Welcome to my game")
+
+    player_choice = input("Please select an option ('rock', 'paper', 'scissors'): ")
+
+    print("USER CHOSE:", player_choice)
+
+    computer_choice = random.choice(VALID_OPTIONS)
+    print("COMPUTER CHOSE:", computer_choice)
+
+
+    result_message = determine_winner(player_choice, computer_choice)
+
+    print(result_message)
 
